@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/search_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/enter_city"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/bottomNavigationInactiveColor" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/et_search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/search_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/search"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/bottomNavigationInactiveColor" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_weather_image"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_below="@id/et_search"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/main_weather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ic_weather_image"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/_18sdp" />
+
+        <TextView
+            android:id="@+id/desc_weather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_weather"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:id="@+id/ic_temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/desc_weather"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/_20sdp" />
+
+        <TextView
+            android:id="@+id/ic_humidity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ic_temp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/_20sdp" />
+
+        <ProgressBar
+            android:id="@+id/weather_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</layout>
